@@ -1,10 +1,11 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 
       
-      const FormUsers = ({getUser,selectedUser,deselectedUser,modalTwoChange,modalThreeAdd }) => {
+      const FormUsers = ({getUser,selectedUser,deselectedUser,modalTwoChange,modalThreeAdd, password,setPassword }) => {
+       
  // variable para vaciar libreria formulario
  const { register, handleSubmit, reset } = useForm();
  // constante para meter valores iniciales
@@ -51,28 +52,27 @@ reset(initialValues)
    <h2><b>New User</b></h2>
    <div className="item-user">
     <div className="users-container">
-     <label htmlFor="name"><i className="fa-solid fa-user"></i></label>
+     <label htmlFor="name"><i className="fa-solid fa-user"></i></label> 
      <input {...register("first_name")}type="text" id='name' placeholder='name'/>
-    </div>
-    <div className="users-container">
-     <label htmlFor="lastName"></label>
      <input {...register("last_name")}type="text" id='lastName'placeholder='last name'/>
     </div>
    </div>
-   
    <div className="users-container">
     <label htmlFor="email"><i className="fa-solid fa-envelope"></i></label>
     <input {...register("email")}type="text" id='email'placeholder='email'/>
    </div>
    <div className="users-container">
-    <label htmlFor="password"><i className="fa-solid fa-lock"></i></label>
-    <input {...register("password")}type="password" id='password'placeholder='password'/>
+    <label htmlFor="password">
+    {password? <i className="fa-solid fa-eye" onClick={()=>setPassword(!password)}></i> : 
+    <i className="fa-solid fa-eye-slash"onClick={()=>setPassword(!password)}></i>}
+    </label>
+    <input {...register("password")}type={password ? "text" : "password"} id='password'placeholder='password'/>
    </div>
    <div className="users-container">
     <label htmlFor="birthday"><i className="fa-solid fa-cake-candles"></i></label>
     <input {...register("birthday")}type="date" id='birthday'/>
    </div>
-   <div className="btn">
+   <div className="btn-form">
     <button><i className="fa-solid fa-circle-arrow-up"></i></button>
    </div>
    

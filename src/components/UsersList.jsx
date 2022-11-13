@@ -13,7 +13,7 @@ const UsersList = ({usersList,userSelect,deleteUser,modalOne,setModalOne}) => {
      </div>
      <div className='btn'>
       <button onClick={()=>{userSelect(user)}}><i className="fa-solid fa-check"></i></button>
-      <button onClick={() => {deleteUser(user.id), setModalOne(!modalOne)}}><i className="fa-solid fa-trash-can" style={{color:"darkred"}}></i></button>
+      <button onClick={() => {deleteUser(user.id), setModalOne(!modalOne)}}><i className="fa-solid fa-trash-can" style={{color:"#D2001A"}}></i></button>
      </div>
 
     </li>

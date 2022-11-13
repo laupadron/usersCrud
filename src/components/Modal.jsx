@@ -7,7 +7,7 @@ const Modal = ({children, state, changeState}) => {
    
      <div className='modal-item'>
     
-      <i class="fa-solid fa-circle-check" onClick={()=>changeState(false)}></i>
+    <i class="fa-solid fa-circle-xmark" onClick={()=>changeState(false)}></i>
       {children}
    
      </div>

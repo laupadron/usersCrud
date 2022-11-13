@@ -15,6 +15,8 @@ function App() {
   const [modalOne,setModalOne]=useState(false)
   const [modalTwo,setModalTwo]=useState(false)
   const [modalThree,setModalThree]= useState(false)
+  // useStatep para password
+  const [password,setPassword]=useState(false);
 
   // useeffect para traer listado de api
   useEffect(()=>{
@@ -54,6 +56,7 @@ const modalThreeAdd=()=>{
 }
 
 
+
   return (
     <div className="App">
      <div className="element-left">
@@ -61,7 +64,8 @@ const modalThreeAdd=()=>{
        modalOne={modalOne} setModalOne={setModalOne}  />
      </div>
      <div className="element-rigth">
-      <FormUsers getUser={getUser} selectedUser={selectedUser} deselectedUser={deselectedUser} modalTwoChange={modalTwoChange} modalThreeAdd={modalThreeAdd}/>
+      <FormUsers getUser={getUser} selectedUser={selectedUser} deselectedUser={deselectedUser} modalTwoChange={modalTwoChange} modalThreeAdd={modalThreeAdd}
+      password={password} setPassword={setPassword}/>
      </div>
       
      <div className='modal-container'>
