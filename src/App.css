@@ -30,6 +30,7 @@ body{
  width: 50%;
  padding-top: 25px;
  padding-bottom: 5px;
+ 
 }
 @media(max-width:480px){
  .element-left{
@@ -48,7 +49,8 @@ body{
  overflow-x: hidden;
  width: 100%;
  height: 100vh;
- 
+ justify-content: center;
+ align-items: center;
  
 }
 @media (max-width:480px){
@@ -57,7 +59,7 @@ width: 100%;
  margin: 0;
  gap:0;
  padding: 0 10px 0 10px;
- 
+ height: fit-content;
  align-items: center;
  }
 }
@@ -68,15 +70,18 @@ width: 100%;
  list-style: none;
  background-color:beige;
  display: flex;
- 
  font-size: 10px;
  justify-content:space-around;
  align-items:center;
- 
+ margin-bottom: 30px;
  margin-top: 10px;
  border-radius: 30px;
- 
-}
+ }
+ @media (max-width:480px){
+  .user-container{
+   height: fit-content;
+  }
+ }
 .btn{
 
 display: flex;
@@ -106,10 +111,12 @@ justify-content: flex-end;
 }
 @media(max-width:480px){
  .form-users{
-  width: 100vw;
+  width: 80vw;
   border-radius: 0;
+  margin: 20px 0 20px 0 ;
  }
 }
+
 
 .form-users h2{
  text-align:left;
@@ -118,15 +125,19 @@ justify-content: flex-end;
 }
 .item-user{
  display: flex;
- margin-left: 12px;
+ margin-left: 3px;
+ justify-content:space-between;
+ align-items: center;
 }
-
+#name{
+ margin-left: 20px;
+}
 
 
 .users-container{
  display: flex;
  align-items:center;
- justify-content:center;
+ justify-content:space-around;
  width: 90%;
  height: 25px;
 
@@ -183,6 +194,7 @@ position: fixed;
  .modal-container{
   width: 60vw;
   position: relative;
+  margin-bottom: 20px;
  }
 }
 .modal-container h2{
