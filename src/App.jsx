@@ -58,12 +58,12 @@ const modalThreeAdd=()=>{
 
 
   return (
-    <div className="App">
-     <div className="element-left">
+    <div className="App" >
+     <div className="element-left" >
       <UsersList usersList={usersList} userSelect={userSelect} deleteUser={deleteUser} 
        modalOne={modalOne} setModalOne={setModalOne}  />
      </div>
-     <div className="element-rigth">
+     <div className="element-rigth" >
       <FormUsers getUser={getUser} selectedUser={selectedUser} deselectedUser={deselectedUser} modalTwoChange={modalTwoChange} modalThreeAdd={modalThreeAdd}
       password={password} setPassword={setPassword}/>
      </div>
